@@ -32,8 +32,14 @@ class UI {
         productList.appendChild(elemento);
     };
 
+    //metodo borrar elemento del dom
     delProducto(elemento) {
         //buscar elemento del dom 
+    };
+
+    //metodo mostrar mensaje 
+    showMessage(mensaje , ccsClass){
+
     };
 }
 
@@ -42,7 +48,27 @@ document.getElementById('product-form')
     .addEventListener('submit', function (e) {
         //agregar funcionalidad aqui
         console.log('Evento Submit ok!');
-        
+
+        //obtener valores del form
+        const nombre = document.getElementById('nombre').value;
+        const precio = document.getElementById('precio').value;
+        const anno   = document.getElementById('anno').value;
+
+        if (nombre === '' || precio === '') {
+            console.log('error , datos incompletos');
+            return;
+        }
+
+        //crear objeto Producto
+        const producto = new Producto(nombre,precio,anno);
+        //crear objeto UI
+        const ui = new UI();
+
+        ui.addProucto(producto);
+
+        //evitar el refresh del form
+        e.preventDefault();
+
     });
 
 
