@@ -27,7 +27,7 @@
                         <div class="card-header">
                             Agregar Producto
                         </div>
-                        <form class="card-body">
+                        <form id="product-form" class="card-body">
                             <div class="form-group">                                
                                 <input type="text" id="nombre" class="form-control" placeholder="nombre producto">
                             </div>
@@ -43,8 +43,8 @@
                                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                   </div>
 
-                            <a href="#" class="btn btn-primary">Guardar</a>
-                            <a href="#" class="btn btn-primary">Reset</a>
+                            <input type="submit" class="btn btn-primary" value="Guardar"  />
+                            <input type="reset" class="btn btn-secondary" value="Reset" />
                         </form>
                     </div>
                 </div>
@@ -57,6 +57,7 @@
         </div>
     </div>    
     <!-- Optional JavaScript -->
+    <script src="app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
